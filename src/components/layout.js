@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useState } from "react";
+import DarkModeToggle from "react-dark-mode-toggle";
+
 import { Link } from "gatsby"
 
 const Layout = props => {
   const { title, children } = props
-  const [toggleNav, setToggleNav] = React.useState(false)
+  const [toggleNav, setToggleNav, isDarkMode, setIsDarkMode] = useState(() => false);
   return (
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
       <header className="site-head">
@@ -50,6 +52,13 @@ const Layout = props => {
               </li>
               <li className="nav-blog" role="menuitem">
                 <Link to={`/blog`}>Blog</Link>
+              </li>
+              <li>
+                <DarkModeToggle
+                  onChange={setIsDarkMode}
+                  checked={isDarkMode}
+                  size={50}
+                />
               </li>
               {/* <a
                 href="https://www.facebook.com"

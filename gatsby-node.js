@@ -48,9 +48,9 @@ exports.createPages = ({ graphql, actions }) => {
           tagSet.add(tag);
         });
       }
-
+      
       createPage({
-        path: `/blog${post.node.fields.slug}`,
+        path: post.node.fields.slug,
         component: blogPost,
         context: {
           slug: post.node.fields.slug,
@@ -84,7 +84,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: `/blog${value}`
     })
   }
 }

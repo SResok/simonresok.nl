@@ -36,7 +36,7 @@ class ContentNoImage extends Component {
         </div>
         <div>
           <Link
-            to={`/blog/${props.node.fields.slug}`}
+            to={props.node.fields.slug}
             className="post-card-link"
           >
             <h2 className="post-card-title">
@@ -50,7 +50,7 @@ class ContentNoImage extends Component {
         </div>
         <div>
           <Link
-            to={`/blog/${props.node.fields.slug}`}
+            to={props.node.fields.slug}
             className="post-card-link post-card-readmore"
           >
             {props.node.frontmatter.description || props.node.excerpt
@@ -67,7 +67,7 @@ class ContentWithImage extends Component {
   render() {
     const{props}=this.props;
     return (
-      <Link to={`/blog/${props.node.fields.slug}`} className="post-card-link">
+      <Link to={props.node.fields.slug} className="post-card-link">
         <div className="post-card-content">
           <h2 className="post-card-title">
             {props.node.frontmatter.title || props.node.fields.slug}

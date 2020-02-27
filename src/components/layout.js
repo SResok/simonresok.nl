@@ -27,17 +27,11 @@ const Layout = props => {
           </a>
           <nav id="swup" className="site-head-left">
             <ul className="nav" role="menu">
-              {/* <li className="nav-home nav-current" role="menuitem">
+              <li className="nav-home nav-current" role="menuitem">
                 <Link to={`/`}>Home</Link>
-              </li> */}
+              </li>
               <li className="nav-about" role="menuitem">
                 <Link to={`/about`}>About</Link>
-              </li>
-              <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Elements</Link>
-              </li>
-              <li className="nav-tags" role="menuitem">
-                <Link to={`/tags`}>Tags</Link>
               </li>
             </ul>
           </nav>
@@ -48,7 +42,16 @@ const Layout = props => {
           </div>
           <div className="site-head-right">
             <div className="social-links">
-              <a
+              <li className="nav-elements" role="menuitem">
+                <Link to={`/elements`}>Elements</Link>
+              </li>
+              <li className="nav-tags" role="menuitem">
+                <Link to={`/tags`}>Tags</Link>
+              </li>
+              <li className="nav-blog" role="menuitem">
+                <Link to={`/blog`}>Blog</Link>
+              </li>
+              {/* <a
                 href="https://www.facebook.com"
                 title="Facebook"
                 target="_blank"
@@ -79,7 +82,7 @@ const Layout = props => {
                 rel="noopener noreferrer"
               >
                 GitHub
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

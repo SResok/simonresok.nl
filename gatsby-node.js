@@ -50,14 +50,14 @@ exports.createPages = ({ graphql, actions }) => {
       }
 
       createPage({
-        path: post.node.fields.slug,
+        path: `/blog${post.node.fields.slug}`,
         component: blogPost,
         context: {
           slug: post.node.fields.slug,
           previous,
-          next,
-        },
-      })
+          next
+        }
+      });
     })
 
     // Create tags pages.

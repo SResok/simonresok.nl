@@ -1,25 +1,3 @@
-/*
-
-This is a development CSS file which is built to a minified
-production stylesheet in assets/built/screen.scss using gulp dev
-
-*/
-
-/* Lib - Local component imports
-/* ---------------------------------------------------------- */
-@import "vars.scss";
-@import "components/global.scss";
-@import "components/ghost.scss";
-@import "components/lists.scss";
-@import "components/grid.scss";
-@import "components/tables.scss";
-@import "components/forms.scss";
-@import "components/buttons.scss";
-@import "components/actions.scss";
-@import "components/hamburger.scss";
-@import "components/animations.scss";
-@import "components/prism.scss";
-
 /* Main - Theme styles
 /* ---------------------------------------------------------- */
 
@@ -675,7 +653,7 @@ body {
   line-height: 1em;
   font-weight: 400 !important;
   /* background: $color-bg; */
-  background: var($color-bg-dark) !important;
+  background: $color-bg-dark !important;
   border-radius: 3px !important;
 }
 

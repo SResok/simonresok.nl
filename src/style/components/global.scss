@@ -273,6 +273,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -moz-font-feature-settings: "liga" on;
+    font-feature-settings: "liga" on;
     @include light-mode {
       background: $color-bg-light;
       color: $color-base-light;
@@ -413,4 +414,3 @@ h6 {
     margin: 1.5em 0 1em 0;
     font-size: 2.2rem;
 }
-

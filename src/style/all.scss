@@ -1,3 +1,21 @@
+@import 'normalize.css';
 @import 'mixins.scss';
+
+/* Lib - Local component imports
+/* ---------------------------------------------------------- */
+@import "vars.scss";
+@import "components/global.scss";
+@import "components/ghost.scss";
+@import "components/lists.scss";
+@import "components/grid.scss";
+@import "components/tables.scss";
+@import "components/forms.scss";
+@import "components/buttons.scss";
+@import "components/actions.scss";
+@import "components/hamburger.scss";
+@import "components/animations.scss";
+@import "components/prism.scss";
+/* ---------------------------------------------------------- */
+
 @import 'screen.scss';
 @import 'print.scss';

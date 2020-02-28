@@ -5,8 +5,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 // import Bio from "../components/bio"
 
-import "../style/normalize.css"
-import "../style/all.scss"
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const Index = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title

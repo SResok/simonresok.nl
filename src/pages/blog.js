@@ -6,8 +6,6 @@ import SEO from "../components/seo"
 // import Bio from "../components/bio"
 import PostCard from "../components/postCard"
 
-import "../style/normalize.css"
-import "../style/all.scss"
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title

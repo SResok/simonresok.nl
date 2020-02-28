@@ -17,6 +17,7 @@
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.1.27",
     "gatsby-plugin-sharp": "^2.0.36",
+    "gatsby-plugin-use-dark-mode": "^1.1.2",
     "gatsby-remark-copy-linked-files": "^2.0.12",
     "gatsby-remark-images": "^2.0.6",
     "gatsby-remark-prismjs": "^3.3.20",
@@ -35,7 +36,8 @@
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
     "typeface-nunito": "^0.0.72",
-    "url-join": "^4.0.0"
+    "url-join": "^4.0.0",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1",

@@ -83,10 +83,8 @@
 .site-head-open .hamburger-inner::after {
     background-color: var(--color-body-font);
     color: var(--color-body-font);
-    @include light-mode {
-        //TODO
-      background-color: $color-body-font-light-2;
-    }
+    //TODO
+    //background-color: $color-body-font-light-2;
 }
 
 .site-head-open .hamburger-inner {

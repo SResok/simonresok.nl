@@ -42,3 +42,31 @@ $xsmall: 480px;
 $height: 4rem;
 $margin: 2rem;
 $radius: 0.5rem;
+
+:root, .dark-mode {
+  --color-body-font: #{$color-body-font};
+	--color-primary: #{$color-primary};
+	--color-base: #{$color-base};
+	--color-sub-base: #{$color-sub-base};
+	--color-border: #{$color-border};
+	--color-bg: #{$color-bg};
+	--color-bg-dark: #{$color-bg-dark};
+	--link-color: #{$link-color};
+	--color-bg-bright: #{$color-bg-bright};
+
+	--body-color: #{$color-body-font};
+}
+
+.light-mode {
+	--color-body-font: #{$color-body-font-light};
+	--color-primary: #{$color-primary-light};
+	--color-base: #{$color-base-light};
+	--color-sub-base: #{$color-sub-base-light};
+	--color-border: #{$color-border-light};
+	--color-bg: #{$color-bg-light};
+	--color-bg-dark: #{$color-bg-dark-light};
+	--link-color: #{$link-color-light};
+	--color-bg-bright: #{$color-bg-bright-light};
+
+	--body-color: #{$color-base-light-inverted};
+}

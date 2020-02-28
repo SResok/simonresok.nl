@@ -3,13 +3,10 @@
 
 body {
   font-family: $font-sans-serif;
-  background: $color-bg;
+  background: var(--color-bg);
+  color: var(--body-color);
   transition: background 0.3s ease-out;
   transition-delay: 0.25;
-  @include light-mode {
-    background: $color-bg-light;
-    color: $color-base-light-inverted;
-  }
 }
 
 .img {
@@ -67,7 +64,7 @@ body {
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: color($color-base l(+50%));
+  color: color(var(--color-base) l(+50%));
 }
 
 .error-link {
@@ -79,10 +76,7 @@ body {
 .page-head-title {
   margin: 0;
   font-size: 4.2rem;
-  color: $color-body-font;
-  @include light-mode {
-    color: $color-body-font-light;
-  }
+  color: var(--color-body-font);
 }
 @media (max-width: 500px) {
   .page-head-title {
@@ -92,7 +86,7 @@ body {
 
 .page-head-description {
   margin: 0 0 1.6vw;
-  color: color($color-border l(-20%));
+  color: color(var(--color-border) l(-20%));
   font-size: 2.2rem;
   line-height: 1.35em;
 }
@@ -106,15 +100,12 @@ body {
 .site-foot {
   margin: 3vw 0 1vw;
   text-align: center;
-  color: color(#{$color-border} l(-20%));
+  color: color(var(--color-border) l(-20%));
   font-size: 1.4rem;
 }
 
 .site-foot a {
-  color: $color-body-font;
-  @include light-mode {
-    color: $color-body-font-light;
-  }
+  color: var(--color-body-font);
 }
 
 /* Site Navigation
@@ -160,12 +151,9 @@ body {
   display: block;
   margin: 0;
   padding: 10px 12px;
-  color: $color-body-font;
+  color: var(--color-body-font);
   font-weight: 600;
   opacity: 0.6;
-  @include light-mode {
-    color: $color-body-font-light;
-  }
 }
 
 .nav-current a,
@@ -185,7 +173,7 @@ body {
   flex-shrink: 0;
   display: block;
   padding: 10px;
-  color: $color-body-font;
+  color: var(--color-body-font);
   font-size: 2.1rem;
   line-height: 1em;
   font-weight: 700;
@@ -193,9 +181,6 @@ body {
   letter-spacing: 1px;
   overflow: hidden;
   text-overflow: ellipsis;
-  @include light-mode {
-    color: $color-body-font-light;
-  }
 }
 
 .site-head-logo:hover {
@@ -226,8 +211,8 @@ body {
 .subscribe-button {
   display: block;
   padding: 4px 10px;
-  border: $color-base 1px solid;
-  color: $color-base;
+  border: var(--color-base) 1px solid;
+  color: var(--color-base);
   font-size: 1.2rem;
   line-height: 1em;
   border-radius: 10px;
@@ -250,7 +235,7 @@ body {
 .rss-button svg {
   margin-bottom: 1px;
   height: 2.1rem;
-  fill: $color-base;
+  fill: var(--color-base);
 }
 
 /* Mobile Nav Menu
@@ -333,14 +318,11 @@ body {
   }
 
   .site-head-open {
-    background: $color-bg;
+    background: var(--color-bg);
     transition: background 0.5s ease-out;
     transition-delay: 0.25;
     overflow: hidden;
     height: 100vh;
-    @include light-mode {
-      background: $color-bg-light;
-    }
   }
 
   .site-head-open .site-head-container {
@@ -363,10 +345,7 @@ body {
     transform: scale(1) translateY(0px);
   }
   .site-head-open .nav-current a {
-    border-bottom: $color-base 2px solid;
-    @include light-mode {
-      border-bottom: $color-base-light 2px solid;
-    }
+    border-bottom: var(--color-base) 2px solid;
   }
   .site-head-open .site-head-right a {
     opacity: 0.8;
@@ -424,7 +403,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  color: $color-body-font;
+  color: var(--color-body-font);
   background: rgba(0, 0, 0, 0.1);
   opacity: 1;
   transition: opacity 0.5s cubic-bezier(0.33, 0, 0.2, 1);
@@ -434,7 +413,7 @@ body {
 .post-card-body,
 .post-card-tag-link {
   font-size: 1.6rem;
-  color: $color-sub-base;
+  color: var(--color-sub-base);
 }
 
 .post-card-readmore {
@@ -483,7 +462,6 @@ body {
   right: 5vw;
   font-size: 22vw;
   line-height: 1em;
-  font-weight: $color-body-font;
   letter-spacing: -0.1em;
   font-family: $font-serif;
   color: rgba(0, 0, 0, 0.2);
@@ -500,7 +478,7 @@ body {
   font-size: 5rem;
   line-height: 1.15em;
   text-align: left;
-  color: $color-body-font;
+  color:  var(--color-body-font);
 }
 
 .post-card.no-image:hover .post-card-title {
@@ -560,23 +538,17 @@ body {
 
 .post-content-title {
   margin: 0 0 3vw;
-  color: $color-body-font;
+  color: var(--color-body-font);
   text-align: center;
-  @include light-mode {
-    color: $color-body-font-light;
-  }
 }
 
 .post-content-excerpt {
   margin: -2vw 0 3vw;
   font-size: 2.2rem;
   line-height: 1.6em;
-  color: $color-body-font;
+  color: var(--color-body-font);
   text-align: center;
   opacity: 0.7;
-  @include light-mode {
-    color: $color-body-font-light;
-  }
 }
 @media (max-width: 500px) {
   .post-content-excerpt {
@@ -610,10 +582,7 @@ body {
 .post-content-body h4,
 .post-content-body h5,
 .post-content-body h6 {
-  color: $color-body-font;
-  @include light-mode {
-    color: $color-body-font-light;
-  }
+  color: var(--color-body-font);
 }
 
 .post-content-body li {
@@ -632,7 +601,7 @@ body {
   margin: 0 0 1.5em;
   padding: 0 1.5em;
   /* border-left: #3eb0ef 3px solid; */
-  border-left: $color-primary 3px solid;
+  border-left:  var(--color-primary) 3px solid;
 }
 
 .post-content-body blockquote p {
@@ -653,7 +622,7 @@ body {
   line-height: 1em;
   font-weight: 400 !important;
   /* background: $color-bg; */
-  background: $color-bg-dark !important;
+  background: var(--color-bg-dark) !important;
   border-radius: 3px !important;
 }
 
@@ -666,15 +635,12 @@ body {
   margin: 1.5em 0 3em;
   padding: 20px;
   max-width: 100%;
-  border: $color-bg-bright 1px solid !important;
-  color: $color-body-font;
+  border: var(--color-bg-bright) 1px solid !important;
+  color: var(--color-body-font);
   font-size: 1.4rem;
   line-height: 1.5em;
-  background: $color-bg-dark !important;
+  background:  var(--color-bg-dark) !important;
   border-radius: 5px;
-  // @include light-mode {
-  //   color: $color-body-font-light;
-  // }
 }
 
 .post-content-body pre code {
@@ -705,13 +671,9 @@ body {
   margin-left: -10px;
   width: 1px;
   height: 30px;
-  background: $color-body-font;
-  box-shadow: $color-body-font 0 0 5px;
+  background: var(--color-body-font);
+  box-shadow: var(--color-body-font) 0 0 5px;
   transform: rotate(45deg);
-  @include light-mode {
-    background: $color-body-font-light;
-    box-shadow: $color-body-font-light 0 0 5px;
-  }
 }
 
 .footnotes-sep {
@@ -727,7 +689,7 @@ body {
 }
 
 .footnote-backref {
-  color: $color-primary !important;
+  color:  var(--color-primary) !important;
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none !important;
@@ -755,7 +717,7 @@ body {
   display: block;
   margin: 0;
   padding: 0 12px;
-  color: $color-base;
+  color: var(--color-base);
   opacity: 0.4;
 }
 
@@ -793,25 +755,18 @@ body {
   flex: 1 1 auto;
   margin: 0.7vw;
   padding: 0.5vw;
-  background-color: $color-bg-bright;
-  color: $color-sub-base;
+  background-color: var(--color-bg-bright);
+  color: var(--color-sub-base);
   font-size: 2rem;
   line-height: 1em;
   white-space: nowrap;
-  @include light-mode {
-    background-color: $color-bg-bright-light;
-    color: $color-sub-base-light;
-  }
 }
 
 .tag-item:hover {
-  color: $color-bg-bright;
-  background-color: $color-sub-base;
+  color: var(--color-bg-bright);
+  background-color: var(--color-sub-base);
   transition: all 0.4s ease-out;
-  @include light-mode {
-    color: $color-bg-bright-light;
-    background-color: $color-sub-base-light;
-  }
+
 }
 
 @media (max-width: 700px) {

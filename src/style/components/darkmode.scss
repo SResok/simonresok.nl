@@ -1,0 +1,190 @@
+.darkContainer {
+  height: calc(100% - 2rem);
+  display: flex;
+  justify-content: center;
+	align-items: center;
+	    transform: scale(0.7);
+  .switch {
+    position: relative;
+    overflow: hidden;
+    width: 7.5rem;
+    height: 4rem;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      opacity: 0;
+      &:checked ~ .fill {
+        background: #e9f8fd;
+      }
+    }
+
+    label {
+      cursor: pointer;
+
+      .sun-moon {
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        height: 3rem;
+        width: 3rem;
+        margin: 0.5rem;
+        background: #fffdf2;
+        border-radius: 50%;
+        transition: all 0.5s ease;
+
+        /* Default to Moon */
+        border: 0.25rem solid #dee2c6;
+
+        .dots {
+          position: absolute;
+          top: 3px;
+          left: 23px;
+          height: 1rem;
+          width: 1rem;
+          background: #efeedb;
+          border: 0.25rem solid #dee2c6;
+          border-radius: 50%;
+          transition: 0.4s all ease;
+
+          &:before,
+          &:after {
+            position: absolute;
+            content: "";
+            display: block;
+            height: 0.25rem;
+            width: 0.25rem;
+            background: #efeedb;
+            border: 0.25rem solid #dee2c6;
+            border-radius: 50%;
+            transition: 0.4s all ease;
+          }
+          &:after {
+            top: -4px;
+            left: -26px;
+          }
+          &:before {
+            top: 18px;
+            left: -10px;
+          }
+        }
+      }
+
+      .background {
+        z-index: 1;
+        position: absolute;
+        width: 7.5rem;
+        height: 4rem;
+        border-radius: 2.5rem;
+        border: 0.25rem solid #202020;
+        // background: linear-gradient(to right, #484848 0%, #202020 100%);
+        background: linear-gradient(to right, #0e1341 0%, #0e1341 100%);
+        transition: all 0.3s;
+
+        //stars
+        div[class^="stars"] {
+          position: absolute;
+          height: 0.4rem;
+          width: 0.4rem;
+          background: #ffffff;
+          border-radius: 50%;
+          transition: 0.3s all ease;
+          &:before,
+          &:after {
+            position: absolute;
+            content: "";
+            display: block;
+            height: 0.25rem;
+            width: 0.25rem;
+            background: #ffffff;
+            border-radius: 50%;
+            transition: 0.2s all ease;
+          }
+        }
+
+        .stars1 {
+          top: 6px;
+          right: 23px;
+          &:after {
+            top: 8px;
+            right: 20px;
+          }
+          &:before {
+            top: 18px;
+            right: -12px;
+          }
+        }
+
+        .stars2 {
+          top: 40px;
+          right: 48px;
+          &:after {
+            top: -8px;
+            right: -16px;
+          }
+          &:before {
+            top: 6px;
+            right: -26px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Transition to Sun */
+
+.darkContainer {
+  .switch {
+    input:checked {
+      & ~ .fill {
+        background: #e9f8fd;
+      }
+      & ~ .sun-moon {
+        left: calc(100% - 4rem);
+        background: #f5ec59;
+        border-color: #e7c65c;
+        transform: rotate(-25deg);
+        .dots {
+          background: #ffffff;
+          border-color: #ffffff;
+          height: 1.5rem;
+          width: 1.5rem;
+          top: 0px;
+          left: -20px;
+          transform: rotate(25deg);
+          &:before,
+          &:after {
+            background: #ffffff;
+            border-color: #ffffff;
+          }
+
+          &:after {
+            height: 0.65rem;
+            width: 0.65rem;
+            top: 2px;
+            left: -12px;
+          }
+          &:before {
+            height: 0.4rem;
+            width: 0.4rem;
+            top: 6px;
+            left: 14px;
+          }
+        }
+      }
+      & ~ .background {
+        border: 0.25rem solid #78c1d5;
+        // background: linear-gradient(to right, #78c1d5 0%, #bbe7f5 100%);
+        background: linear-gradient(to right, #69c7fe 0%, #69c7fe 100%);
+        div[class^="stars"] {
+          opacity: 0;
+          transform: translateY(2rem);
+        }
+      }
+    }
+  }
+}

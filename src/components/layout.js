@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 import DarkMode from "./DarkMode";
 
-
 const Layout = props => {
-  const { title, children } = props
+  const { title, children } = props;
   const [toggleNav, setToggleNav] = useState(() => false);
   return (
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
@@ -33,7 +32,13 @@ const Layout = props => {
                 <Link to={`/`}>Home</Link>
               </li>
               <li className="nav-about" role="menuitem">
-                <Link to={`/about`}>About</Link>
+                <Link to={`/about`}>Over mij</Link>
+              </li>
+              <li className="nav-blog" role="menuitem">
+                <Link to={`/blog`}>Blog</Link>
+              </li>
+              <li className="nav-contact" role="menuitem">
+                <Link to={`/contact`}>Contact</Link>
               </li>
             </ul>
           </nav>
@@ -44,17 +49,14 @@ const Layout = props => {
           </div>
           <div className="site-head-right">
             <div className="social-links">
-              <li className="nav-elements" role="menuitem">
+              {/* <li className="nav-elements" role="menuitem">
                 <Link to={`/elements`}>Elements</Link>
               </li>
               <li className="nav-tags" role="menuitem">
                 <Link to={`/tags`}>Tags</Link>
-              </li>
-              <li className="nav-blog" role="menuitem">
-                <Link to={`/blog`}>Blog</Link>
-              </li>
+              </li> */}
               <li>
-               <DarkMode/>
+                <DarkMode />
               </li>
               {/* <a
                 href="https://www.facebook.com"
@@ -110,6 +112,6 @@ const Layout = props => {
       </footer>
     </div>
   );
-}
+};
 
-export default Layout
+export default Layout;

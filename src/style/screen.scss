@@ -30,6 +30,10 @@ body {
 .site-wrapper {
   padding: 3vw;
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media (max-width: 850px) {
   .site-wrapper {
@@ -74,8 +78,9 @@ body {
 }
 
 .page-head-title {
-  margin: 0;
-  font-size: 4.2rem;
+  //TODO
+  // margin: 0;
+  // font-size: 4.2rem;
   color: var(--color-body-font);
 }
 @media (max-width: 500px) {

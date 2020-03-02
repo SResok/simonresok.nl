@@ -1,13 +1,14 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 // import Bio from "../components/bio"
 
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const Index = ({ data }, location) => {
-  const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title;
 
   return (
     <Layout title={siteTitle}>
@@ -17,13 +18,16 @@ const Index = ({ data }, location) => {
       />
       {/* <Bio /> */}
       <header className="page-head">
-        <h2 className="page-head-title">
-          My portfolio with a bold, minimal theme, focused on clean typography.
-        </h2>
+        <h1 className="page-head-title">Ik ben een front-end developer</h1>
+        <p className="page-head-description">
+          Lees over <Link to={`/about`}>mijn achtergrond en ervaring</Link> of{" "}
+          <Link to={`/blog`}>mijn blog posts</Link>. Voor beschikbaarheid,{" "}
+          <Link to={`/contact`}>neem contact op</Link>.
+        </p>
       </header>
     </Layout>
   );
-}
+};
 
 const indexQuery = graphql`
   query {
@@ -33,7 +37,7 @@ const indexQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default props => (
   <StaticQuery
@@ -42,4 +46,4 @@ export default props => (
       <Index location={props.location} props data={data} {...props} />
     )}
   />
-)
+);

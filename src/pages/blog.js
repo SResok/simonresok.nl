@@ -19,16 +19,19 @@ const BlogIndex = ({ data }, location) => {
         keywords={[`devlog`, `blog`, `gatsby`, `javascript`, `react`]}
       />
       {/* <Bio /> */}
-      {data.site.siteMetadata.description && (
+      {/* {data.site.siteMetadata.description && (
         <header className="page-head">
-          <h2 className="page-head-title">
-            {data.site.siteMetadata.description}
-          </h2>
+          <h1>Posts about HTML, CSS, JavaScript, accessibility and browsers</h1>
         </header>
-      )}
+      )} */}
+      <article className="post-content page-template no-image">
+        <div className="post-content-body">
+          <h1>Posts about HTML, CSS, JavaScript, accessibility and browsers</h1>
+        </div>
+      </article>
       <div className="post-feed">
         {posts.map(({ node }) => {
-          postCounter++
+          postCounter++;
           return (
             <PostCard
               key={node.fields.slug}
@@ -36,11 +39,11 @@ const BlogIndex = ({ data }, location) => {
               node={node}
               postClass={`post`}
             />
-          )
+          );
         })}
       </div>
     </Layout>
-  )
+  );
 }
 
 const indexQuery = graphql`

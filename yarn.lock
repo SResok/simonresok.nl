@@ -8106,24 +8106,6 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-lottie-api@bodymovin/lottie-api#master:
-  version "1.0.2"
-  resolved "https://codeload.github.com/bodymovin/lottie-api/tar.gz/2015b503589c5f78265942d212e64abd1d756fcf"
-
-lottie-react-web@^2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/lottie-react-web/-/lottie-react-web-2.1.4.tgz#3159b4600b6baa858175a1c97daa595f85903d6e"
-  integrity sha512-/wcAxckdTo1uKUgv3hvUktDeeTQByNdRda+1iBQcteV3PyaIikCV0LleSOkBJccYA+v0mM/OZvoSbmQdWxt4+w==
-  dependencies:
-    babel-runtime "^6.26.0"
-    lottie-api bodymovin/lottie-api#master
-    lottie-web "^5.2.1"
-
-lottie-web@^5.2.1:
-  version "5.6.5"
-  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.6.5.tgz#3a2f5f6ba64fb492cf8557dae504d06ead132525"
-  integrity sha512-rpBnawJxb+4QhZz8PyZl6k5y4NpzFrpuV/+c/36w4pryKv6EWb9aEwsqCXl+zK1dYddyFyN1zdvsonJyk7aNTg==
-
 loud-rejection@^1.0.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/loud-rejection/-/loud-rejection-1.6.0.tgz#5b46f80147edee578870f086d04821cf998e551f"
@@ -10585,13 +10567,6 @@ rc@^1.2.7, rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dark-mode-toggle@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/react-dark-mode-toggle/-/react-dark-mode-toggle-0.0.3.tgz#9725357c19674fca93a7e00b9126d474b50d8126"
-  integrity sha512-DMdd/ClnVs+i0iV5u0UdLwUHHbUzg2TQCqQB9HFypftfo+S5MU6jtFzqo6gDGl8kIISYqMDAkdmw6nszAUQs7w==
-  dependencies:
-    lottie-react-web "^2.1.4"
-
 react-dev-utils@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-4.2.3.tgz#5b42d9ea58d5e9e017a2f57a40a8af408a3a46fb"
@@ -10659,6 +10634,13 @@ react-hot-loader@^4.12.18:
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.1.0"
     source-map "^0.7.3"
+
+react-icons@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.9.0.tgz#89a00f20a0e02e6bfd899977eaf46eb4624239d5"
+  integrity sha512-gKbYKR+4QsD3PmIHLAM9TDDpnaTsr3XZeK1NTAb6WQQ+gxEdJ0xuCgLq0pxXdS7Utg2AIpcVhM1ut/jlDhcyNg==
+  dependencies:
+    camelcase "^5.0.0"
 
 react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.0"

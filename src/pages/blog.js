@@ -7,13 +7,13 @@ import SEO from "../components/seo"
 import PostCard from "../components/postCard"
 
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
-const BlogIndex = ({ data }, location) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
-  let postCounter = 0
+const BlogIndex = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMarkdownRemark.edges;
+  let postCounter = 0;
 
   return (
-    <Layout title={siteTitle}>
+    <Layout title={siteTitle} location={location}>
       <SEO
         title="Blog"
         keywords={[`devlog`, `blog`, `gatsby`, `javascript`, `react`]}
@@ -44,7 +44,7 @@ const BlogIndex = ({ data }, location) => {
       </div>
     </Layout>
   );
-}
+};
 
 const indexQuery = graphql`
   query {

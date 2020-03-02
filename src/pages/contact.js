@@ -4,11 +4,11 @@ import { graphql, StaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const ContactPage = ({ data }, location) => {
+const ContactPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout title={siteTitle}>
+    <Layout title={siteTitle} location={location}>
       <SEO title="About" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
 
       <article className="post-content page-template no-image">

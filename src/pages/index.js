@@ -7,11 +7,11 @@ import SEO from "../components/seo";
 // import Bio from "../components/bio"
 
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
-const Index = ({ data }, location) => {
+const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout title={siteTitle}>
+    <Layout title={siteTitle} location={location}>
       <SEO
         title="Home"
         keywords={[`devlog`, `blog`, `gatsby`, `javascript`, `react`]}

@@ -151,7 +151,18 @@ body {
   padding: 0;
 }
 
-.site-head-left a,
+li.c-main-nav__elem {
+  a.c-main-nav__link {
+    svg {
+      font-size: 1.3em;
+    }
+    span.c-main-nav__text{
+      padding-left: 5px;
+    }
+  }
+}
+
+// .site-head-left a,
 .site-head-right a {
   display: block;
   margin: 0;
@@ -162,6 +173,7 @@ body {
 }
 
 .nav-current a,
+a.nav-current,
 .site-head a:hover {
   text-decoration: none;
   opacity: 1;
@@ -255,109 +267,120 @@ body {
 }
 
 @media (max-width: 850px) {
-  .site-head {
-    padding: 0;
-  }
-  .nav-burger {
-    display: block;
-  }
-  .site-head-container {
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 40px;
-    background: rgba(255, 255, 255, 0);
-    z-index: -1;
-    transition: all 0.4s ease-out;
-    overflow: hidden;
-  }
-  .site-head-left,
-  .site-head-right {
-    position: relative;
-    z-index: -1;
-    height: auto;
-    transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transition-delay: 1s;
-  }
-  .site-head-left a,
-  .site-head-right a {
-    margin: 8px 0;
-    padding: 1px 0;
-    font-size: 2.6rem;
-    line-height: 1.15em;
-    font-weight: 300;
-    opacity: 0;
-  }
-  .site-head-right a {
-    padding: 5px 0;
-    margin: 1px 0;
-    font-size: 2rem;
-  }
-  .nav {
-    width: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 3vw 0 0 0;
-  }
-  .site-head-left {
-    order: 2;
-    margin: 0;
-    width: 100%;
-  }
-  .site-head-center {
-    order: 1;
-    position: static;
-    z-index: auto;
-    display: flex;
-    justify-content: left;
-    width: 186px;
-  }
-  .site-head-right {
-    order: 3;
-    width: 100%;
-    margin-top: 3vw;
-  }
-  .social-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .site-head-open {
-    background: var(--color-bg);
-    transition: background 0.5s ease-out;
-    transition-delay: 0.25;
-    overflow: hidden;
-    height: 100vh;
-  }
-
-  .site-head-open .site-head-container {
-    height: 100vh;
-    transition: height 0.2s ease-in;
-  }
-
-  .site-head-open .site-head-left,
-  .site-head-open .site-head-right {
-    z-index: 9999;
-    height: auto;
-    transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  }
-
-  .site-head-open .site-head-left a,
-  .site-head-open .site-head-right a {
-    opacity: 1;
-    transition: transform 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99),
-      opacity 0.9s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transform: scale(1) translateY(0px);
-  }
-  .site-head-open .nav-current a {
-    border-bottom: var(--color-base) 2px solid;
-  }
-  .site-head-open .site-head-right a {
-    opacity: 0.8;
-  }
-  .site-head-open .site-foot {
+  .c-main-nav__text{
     display: none;
   }
+  .site-head-right a{
+    padding: 5px 6px;
+  }
+  .site-head-logo{
+    span{
+      display: none;
+    }
+  }
+  // .site-head {
+  //   padding: 0;
+  // }
+  // .nav-burger {
+  //   display: block;
+  // }
+  // .site-head-container {
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  //   height: 40px;
+  //   background: rgba(255, 255, 255, 0);
+  //   z-index: -1;
+  //   transition: all 0.4s ease-out;
+  //   overflow: hidden;
+  // }
+  // .site-head-left,
+  // .site-head-right {
+  //   position: relative;
+  //   z-index: -1;
+  //   height: auto;
+  //   transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  //   transition-delay: 1s;
+  // }
+  // .site-head-left a,
+  // .site-head-right a {
+  //   margin: 8px 0;
+  //   padding: 1px 0;
+  //   font-size: 2.6rem;
+  //   line-height: 1.15em;
+  //   font-weight: 300;
+  //   opacity: 0;
+  // }
+  // .site-head-right a {
+  //   padding: 5px 0;
+  //   margin: 1px 0;
+  //   font-size: 2rem;
+  // }
+  // .nav {
+  //   width: 100%;
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  //   align-items: flex-start;
+  //   margin: 3vw 0 0 0;
+  // }
+  // .site-head-left {
+  //   order: 2;
+  //   margin: 0;
+  //   width: 100%;
+  // }
+  // .site-head-center {
+  //   order: 1;
+  //   position: static;
+  //   z-index: auto;
+  //   display: flex;
+  //   justify-content: left;
+  //   width: 186px;
+  // }
+  // .site-head-right {
+  //   order: 3;
+  //   width: 100%;
+  //   margin-top: 3vw;
+  // }
+  // .social-links {
+  //   flex-direction: column;
+  //   align-items: flex-start;
+  // }
+
+  // .site-head-open {
+  //   background: var(--color-bg);
+  //   transition: background 0.5s ease-out;
+  //   transition-delay: 0.25;
+  //   overflow: hidden;
+  //   height: 100vh;
+  // }
+
+  // .site-head-open .site-head-container {
+  //   height: 100vh;
+  //   transition: height 0.2s ease-in;
+  // }
+
+  // .site-head-open .site-head-left,
+  // .site-head-open .site-head-right {
+  //   z-index: 9999;
+  //   height: auto;
+  //   transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  // }
+
+  // .site-head-open .site-head-left a,
+  // .site-head-open .site-head-right a {
+  //   opacity: 1;
+  //   transition: transform 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99),
+  //     opacity 0.9s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  //   transform: scale(1) translateY(0px);
+  // }
+  // .site-head-open .nav-current a {
+  //   border-bottom: var(--color-base) 2px solid;
+  // }
+  // .site-head-open .site-head-right a {
+  //   opacity: 0.8;
+  // }
+  // .site-head-open .site-foot {
+  //   display: none;
+  // }
 }
 
 /* Post Feed
@@ -483,7 +506,7 @@ body {
   font-size: 5rem;
   line-height: 1.15em;
   text-align: left;
-  color:  var(--color-body-font);
+  color: var(--color-body-font);
 }
 
 .post-card.no-image:hover .post-card-title {
@@ -606,7 +629,7 @@ body {
   margin: 0 0 1.5em;
   padding: 0 1.5em;
   /* border-left: #3eb0ef 3px solid; */
-  border-left:  var(--color-primary) 3px solid;
+  border-left: var(--color-primary) 3px solid;
 }
 
 .post-content-body blockquote p {
@@ -644,7 +667,7 @@ body {
   color: var(--color-body-font);
   font-size: 1.4rem;
   line-height: 1.5em;
-  background:  var(--color-bg-dark) !important;
+  background: var(--color-bg-dark) !important;
   border-radius: 5px;
 }
 
@@ -694,7 +717,7 @@ body {
 }
 
 .footnote-backref {
-  color:  var(--color-primary) !important;
+  color: var(--color-primary) !important;
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none !important;
@@ -771,7 +794,6 @@ body {
   color: var(--color-bg-bright);
   background-color: var(--color-sub-base);
   transition: all 0.4s ease-out;
-
 }
 
 @media (max-width: 700px) {

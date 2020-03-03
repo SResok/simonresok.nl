@@ -103,7 +103,8 @@ body {
 }
 
 .site-foot {
-  margin: 3vw 0 1vw;
+  margin: 3vw 0 0;
+  // margin: 3vw 0 1vw;
   text-align: center;
   color: color(var(--color-border) l(-20%));
   font-size: 1.4rem;
@@ -170,6 +171,7 @@ li.c-main-nav__elem {
   color: var(--color-body-font);
   font-weight: 600;
   opacity: 0.6;
+  border-bottom:1px solid transparent;
 }
 
 .nav-current a,
@@ -177,6 +179,8 @@ a.nav-current,
 .site-head a:hover {
   text-decoration: none;
   opacity: 1;
+  //border-bottom: 1px solid var(--color-body-font);
+  border-color: var(--color-body-font);
 }
 
 .site-head-center {

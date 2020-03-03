@@ -2,15 +2,22 @@
 /* ---------------------------------------------------------- */
 
 .transition-fade {
-    transition: 0.25s;
-    opacity: 1;
-    animation: slideUp 0.9s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-    transform: translate3d(0, 4vh, 0);
-}
-html.is-animating .transition-fade {
-    opacity: 0;
+  //transition: 0.25s;
+  opacity: 1;
+  animation: slideUp 0.9s cubic-bezier(0.075, 0.82, 0.165, 1) forwards, fadeIn .5s;
+  transform: translate3d(0, 4vh, 0);
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 @keyframes slideUp {
   0% {
     transform: translate3d(0, 4vh, 0);

@@ -28,7 +28,7 @@ const Navigation = props => {
   const navLinks = [
     { to: "/", text: "Home", icon: FaMapMarker },
     { to: "/about", text: "Over mij", icon: FaWrench },
-    { to: "/blog", text: "Blog", icon: FaPencilAlt },
+    // { to: "/blog", text: "Blog", icon: FaPencilAlt },
     { to: "/contact", text: "Contact", icon: FaEnvelope }
   ];
 

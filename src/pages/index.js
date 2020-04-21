@@ -20,8 +20,8 @@ const Index = ({ data, location }) => {
       <header className="page-head">
         <h1 className="page-head-title">Ik ben een front-end developer</h1>
         <p className="page-head-description">
-          Lees over <Link to={`/about`}>mijn achtergrond en ervaring</Link> of{" "}
-          <Link to={`/blog`}>mijn blog posts</Link>. Voor beschikbaarheid,{" "}
+          Lees over <Link to={`/about`}>mijn achtergrond en ervaring</Link>{/*  of{" "}
+          <Link to={`/blog`}>mijn blog posts</Link> */}. Voor beschikbaarheid,{" "}
           <Link to={`/contact`}>neem contact op</Link>.
         </p>
       </header>

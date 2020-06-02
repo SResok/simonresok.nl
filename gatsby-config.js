@@ -1,5 +1,5 @@
-const urljoin = require("url-join")
-const siteConfig = require("./siteConfig")
+const urljoin = require("url-join");
+const siteConfig = require("./siteConfig");
 
 module.exports = {
   siteMetadata: {
@@ -90,9 +90,9 @@ module.exports = {
         short_name: siteConfig.shortName,
         start_url: siteConfig.prefix,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#008080`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`
+        icon: `content/assets/SR_LOGO.png`
       }
     },
     // `gatsby-plugin-netlify`,

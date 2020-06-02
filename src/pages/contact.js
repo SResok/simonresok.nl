@@ -4,6 +4,9 @@ import { graphql, StaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
+import { FaEnvelope } from "react-icons/fa";
+import Obfuscate from "react-obfuscate";
+
 const ContactPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
 
@@ -14,7 +17,17 @@ const ContactPage = ({ data, location }) => {
       <article className="post-content page-template no-image">
         <div className="post-content-body">
           <h1 className="post-content-title">Contact</h1>
-          <p>Email: simonresok@hotmail.com</p>
+
+          <p>
+            E-mail:&nbsp;
+            <Obfuscate
+              email="simonresok@hotmail.com"
+              headers={{
+                subject: "",
+                body: ""
+              }}
+            />
+          </p>
         </div>
       </article>
     </Layout>
